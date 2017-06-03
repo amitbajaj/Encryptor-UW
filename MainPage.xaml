@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="Encryptor_UW.MainPage"
+    x:Name="MasterPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Grid.Row="0" Grid.Column="0" Margin="10" >
+            <PasswordBox x:Name="txtPass" Margin="5,5,5,0" VerticalAlignment="Top" PlaceholderText="Enter the password for encryption" MaxHeight="30"/>
+            <Grid>
+                <StackPanel Grid.Row="0" Grid.Column="0">
+                    <Button x:Name="btnEncrypt" Content="Encrypt" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" Click="btnEncrypt_Click"/>
+                </StackPanel>
+                <StackPanel Grid.Row="0" Grid.Column="1">
+                    <Button x:Name="btnDecrypt" Content="Decrypt" HorizontalAlignment="Right" Margin="0,5,5,0" VerticalAlignment="Top" Click="btnDecrypt_Click"/>
+                </StackPanel>
+            </Grid>
+            <Grid>
+                <StackPanel Grid.Row="0" Grid.Column="0">
+                    <Button x:Name="btnReadFromGoogle" Content="Read from Google" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" Click="btnReadFromGoogle_Click"/>
+                </StackPanel>
+                <StackPanel Grid.Row="0" Grid.Column="1">
+                    <Button x:Name="btnWriteToGoogle" Content="Write to Google" HorizontalAlignment="Right" Margin="0,5,5,0" VerticalAlignment="Top" Click="btnWriteToGoogle_Click"/>
+                </StackPanel>
+            </Grid>
+            <TextBox x:Name="txtData" TextWrapping="Wrap" Text="" InputScope="Text" PlaceholderText="Enter the data to be encrypted" Margin="5" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+        </StackPanel>
+    </Grid>
+</Page>
